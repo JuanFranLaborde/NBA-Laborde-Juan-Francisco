@@ -14,12 +14,9 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     background-color: white;
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
 }
-
 
 html {
     height: 100%;
@@ -112,7 +109,7 @@ footer{
     padding-top: 40px;
     color: black;
     width: 100vw;
-    align-self: flex-end;
+    align-self: flex-end; 
 }
 .footer-content{
     display: flex;
