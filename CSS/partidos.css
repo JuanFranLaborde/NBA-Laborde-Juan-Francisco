@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+ol,
+ul {
+    padding-left: 0;
+}
+
+
+/*BODY*/
+
+body{
+    background: #1d428a;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+}
+
+html {
+    height: 100%;
+}
+
+/*HEADER*/
+
+
+.navbar-nav .show>.nav-link {
+    color: red;
+}
+
+.nav-link:hover {
+    color: red;
+    transition: 0.6s ease;
+    transform: scale(1.2);
+}
+
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: rgba(132, 0, 255, 0.432);
+}
+
+.dropdown-item:hover {
+    color: red;
+    transition: 0.5s ease;
+}
+
+.navbar-brand{
+    cursor: pointer;
+    display: flex;
+}
+
+.navbar-brand img{
+    height: 70px;
+    width: auto;
+    transition: all 0.6s;
+}
+
+.navbar-brand img:hover{
+    transform: scale(1.2);
+}
+
+/*FOOTER*/
+
+footer{
+    position: relative;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    height: auto;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: black;
+    width: 100vw;
+    align-self: flex-end;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    line-height: 3rem;
+    display: flex;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: black;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: #c8102e;
+}
+
+.footer-bottom{
+    background: gray;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    align-self: flex-end;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+    margin-left: 2px;
+    color: red;
+}
+
+.footer__bottom h4 {
+    color: #fafafa;
+    font-size: 0.8rem;
+}
+
+.author {
+    opacity: .4;
+    color: red;
+    text-decoration: none;
+}
+
+/*MAIN*/
+
+.contenedor {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+    padding-top: 150px;
+
+	/* Flexbox */
+	/* display: flex;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 20px;
+    position: relative;
+}
+
+.titulo {
+	font-size: 24px;
+	padding: 20px 0;
+}
+
+.contenedor-partidos {
+	/* Flexbox */
+	/* width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.card {
+	border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+    background-position: center center;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://vbsports.es/wp-content/uploads/2018/08/nba-banner.jpg");
+	/* Flexbox */
+	/* width: calc(33.33% - 20px); */
+}
+
+
+.card .textos {
+	height: 100%;
+	
+	/* Flebox */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;    
+
+	/* Grid */
+	/* display: grid;
+	grid-template-rows: 1fr auto; */
+}
+
+.banner {
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px;
+	background-size: cover;
+	background-position: center center;
+    width: 100%;
+    height: 87vh;
+    background-image: linear-gradient(#000000b4, #000000b4), url("https://i.pinimg.com/originals/16/73/63/167363d195c449b56cbb70bc14984383.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+	/* Flexbox */
+	/* width: 30%; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; 
+
+	/* Grid */
+	/* display: grid;
+	grid-template-rows: auto auto auto;
+	align-items: center; */
+}
+
+.banner ul {
+	list-style: none;
+}
+
+.banner ul li {
+	margin: 15px;
+	font-weight: bold;
+}
+
+.banner .boton {
+	background: #3A537D;
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+}
+
+.banner .boton a{
+    opacity: .4;
+    color: #ffff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+	
+}
+
+@media screen and (max-width: 700px) {
+	
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        justify-content: flex-end;
+    }
+    
+}
+
