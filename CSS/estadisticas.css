@@ -11,12 +11,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    background-color: black;
+    background-color: #eee;
     height: 100%;
-    background-image: url("../resources/darkness.webp");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: repeat;
 }
 
 
@@ -59,10 +55,6 @@ body {
 
 /*MAIN*/
 
-html {
-	font-size: 62.5%;
-}
-html,
 main {
 	height: 100%;
 }
@@ -70,9 +62,15 @@ main {
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
 	color: #fff;
-	background-color: #111111;
 	display: grid;
 	place-items: center;
+    padding-top: 4%;
+    margin-right: 40px;
+    margin-left: 10px;
+    padding-left: 2%;
+    gap: 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 a {
 	text-decoration: none;
@@ -189,7 +187,7 @@ footer{
     align-items: center;
     justify-content: center;
     margin: 1rem 0 3rem 0;
-    margin-right: 40px;
+
 }
 .socials li{
     margin: 0 10px;

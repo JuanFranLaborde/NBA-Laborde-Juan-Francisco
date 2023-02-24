@@ -17,15 +17,6 @@ ul {
 
 /*BODY*/
 
-body{
-    background-attachment: fixed;
-    background-repeat: repeat;
-    height:100%;
-    position: relative;
-    background-color: white;
-    background-position: center;
-}
-
 html {
     height: 100%;
 }
@@ -69,17 +60,13 @@ html {
 
 /*MAIN*/
 
-html {
-    font-family: "Poppins", sans-serif;
-    font-size: 10px;
-  }
 main {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1a1d24;
+    background-color: #eee;
     padding: 0 1.5rem;
     font-size: 1.6rem;
   }
@@ -96,6 +83,10 @@ a {
     padding: 2.5rem;
     box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
     border-radius: 0.8rem;
+    margin-right: 30px;
+    margin-left: 150px;
+    margin-top: 150px;
+    margin-bottom: 80px;
   }
   .blog-post__img {
     position: relative;
@@ -254,7 +245,7 @@ footer{
     }
     }
 
-    @media (max-width: 1068px) {
+@media (max-width: 1068px) {
         .blog-post {
           max-width: 80rem;
         }
@@ -263,13 +254,13 @@ footer{
           max-width: 30rem;
         }
       }
-      @media (max-width: 868px) {
+@media (max-width: 868px) {
         .blog-post {
           max-width: 70rem;
         }
       }
-      @media (max-width: 768px) {
-        .blog-post {
+@media (max-width: 768px) {
+  .blog-post {
           padding: 2.5rem;
           flex-direction: column;
         }

@@ -15,18 +15,15 @@ ul {
 
 
 /*BODY*/
-html {
-    font-size: 62.5%;
-}
 
 body {
-    font-size: 1.6rem;
+    font-size: 16px;
     color: #333;
     background-color: #eee;
+
 }
 
 /*HEADER*/
-.navbar-nav .nav-link.active,
 .navbar-nav .show>.nav-link {
     color: red;
 }
@@ -269,18 +266,6 @@ main {
         width: 25rem;
         height: initial;
     }
-}
-
-@media screen and (max-width: 900px) {
-	
-}
-
-@media screen and (max-width: 700px) {
-	
-}
-
-@media screen and (max-width: 600px) {
-
 }
 
 @media (min-width: 992px) {

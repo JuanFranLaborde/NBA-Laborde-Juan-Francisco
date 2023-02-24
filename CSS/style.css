@@ -93,7 +93,7 @@ section img:hover{
 
 /*FOOTER*/
 
-footer{
+/* footer{
     position: relative;
     text-align: center;
     bottom: 0;
@@ -176,6 +176,72 @@ footer{
     opacity: .4;
     color: red;
     text-decoration: none;
+} */
+
+i {
+    font-size: 2.4rem;
+}
+.footer {
+    position: relative;
+    padding-block: 5rem;
+    background-color: #eee;
+    color: #666873;
+}
+.footer__container {
+    max-width: 116rem;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+}
+.footer__title {
+    font-size: 1.8rem;
+    color: #1d428a;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.footer__list-item {
+    list-style: none;
+}
+.footer__list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color .25s;
+}
+.footer__list-link:hover {
+    color: red;
+}
+
+.company__info {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-right: 5rem;
+}
+.company__logo {
+    color: #1d428a;
+}
+.company__info ul {
+    flex-direction: row;
+}
+.copyright {
+    margin-top: auto;
+}
+@media screen and (min-width: 40em) {
+    .company__info {
+        grid-column: span 2;
+    }
 }
 
 @media (min-width: 992px) {
