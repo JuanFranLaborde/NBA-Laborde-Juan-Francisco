@@ -15,22 +15,18 @@ ul {
 
 
 /*BODY*/
-
-body{
-    background: #1d428a;
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-    background-size: cover;
-    position: relative;
+html {
+    font-size: 62.5%;
 }
 
-html {
-    height: 100%;
+body {
+    font-size: 1.6rem;
+    color: #333;
+    background-color: #eee;
 }
 
 /*HEADER*/
-
-
+.navbar-nav .nav-link.active,
 .navbar-nav .show>.nav-link {
     color: red;
 }
@@ -74,6 +70,7 @@ footer{
     left: 0;
     right: 0;
     background: white;
+    background-attachment: fixed;
     height: auto;
     width: 100%;
     font-family: "Open Sans";
@@ -81,7 +78,6 @@ footer{
     color: black;
     width: 100vw;
     align-self: flex-end;
-    size: 100%;
 }
 .footer-content{
     display: flex;
@@ -160,125 +156,119 @@ footer{
 
 /*MAIN*/
 
-.contenedor {
-	width: 90%;
-	max-width: 1200px;
-	margin: auto;
-	padding: 40px 0;
-    padding-top: 150px;
-
-	/* Flexbox */
-	/* display: flex;
-	gap: 20px; */
-
-	/* Grid */
-	display: grid;
-	grid-template-columns: 3fr 1fr;
-	gap: 20px;
-    position: relative;
-}
-
-.titulo {
-	font-size: 24px;
-	padding: 20px 0;
-}
-
-.contenedor-partidos {
-	/* Flexbox */
-	/* width: 70%;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px; */
-
-	/* Grid */
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 20px;
+main {
+    font-size: 1.6rem;
+    color: #333;
+    background-color: #eee;
+    padding-top: 4%;
+    margin-right: 40px;
+    margin-left: 10px;
+    padding-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .card {
-	border-radius: 10px;
-	min-height: 200px;
-	font-weight: bold;
-	padding: 20px;
-	position: relative;
-	overflow: hidden;
-	background-size: cover;
-    background-position: center center;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://vbsports.es/wp-content/uploads/2018/08/nba-banner.jpg");
-	/* Flexbox */
-	/* width: calc(33.33% - 20px); */
+    background-color: #fff;
+    box-shadow: 2px .8rem 1rem rgba(0, 0, 0, .025);
 }
 
-
-.card .textos {
-	height: 100%;
-	
-	/* Flebox */
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;    
-
-	/* Grid */
-	/* display: grid;
-	grid-template-rows: 1fr auto; */
+.card__publication {
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
 }
 
-.banner {
-	border-radius: 10px;
-	text-align: center;
-	padding: 20px;
-	background-size: cover;
-	background-position: center center;
+.card__publication img {
+    position: absolute;
     width: 100%;
-    height: 87vh;
-    background-image: linear-gradient(#000000b4, #000000b4), url("https://i.pinimg.com/originals/16/73/63/167363d195c449b56cbb70bc14984383.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-	/* Flexbox */
-	/* width: 30%; */
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between; 
-
-	/* Grid */
-	/* display: grid;
-	grid-template-rows: auto auto auto;
-	align-items: center; */
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s;
 }
 
-.banner ul {
-	list-style: none;
+.card:hover .card__publication img {
+    transform: scale(1.5);
 }
 
-.banner ul li {
-	margin: 15px;
-	font-weight: bold;
+.card__publication>div {
+    background: linear-gradient(to right bottom,
+            rgba(48, 76, 255, 0.8), rgba(255, 0, 13, 0.8));
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
 }
 
-.banner .boton {
-	background: #3A537D;
-	display: block;
-	width: 100%;
-	font-weight: bold;
-	font-size: 14px;
-	text-align: center;
-	padding: 10px;
-	border: none;
-	border-radius: 4px;
-	font-family: 'Roboto', sans-serif;
-	cursor: pointer;
+.card__publication i {
+    margin-right: 1rem;
 }
 
-.banner .boton a{
-    opacity: .4;
-    color: #ffff;
+.card__publication span {
+    display: block;
+}
+
+.card__author {
+    margin-bottom: .5rem;
+}
+
+.card__info {
+    position: relative;
+    padding: 2rem 3rem;
+}
+
+.card__title {
+    font-size: 3rem;
+}
+
+.card__subtitle {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #a2a2a2;
+    margin-bottom: 1rem;
+}
+
+.card__cta {
+    position: relative;
+    display: inline-block;
     text-decoration: none;
+    font-weight: bold;
+    color: red;
+    margin-top: 2rem;
+}
+
+.card__cta span {
+    display: inherit;
+    transition: transform .5s;
+}
+
+.card__cta:hover span {
+    transform: translateX(.5rem);
+}
+
+@media screen and (min-width: 37.5em) {
+    .main{
+        padding-top: 80%;
+    }
+
+    .card {
+        display: grid;
+        grid-auto-flow: column;
+        max-width: 75rem;
+    }
+
+    .card__publication {
+        width: 25rem;
+        height: initial;
+    }
 }
 
 @media screen and (max-width: 900px) {
