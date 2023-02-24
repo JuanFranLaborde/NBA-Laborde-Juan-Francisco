@@ -9,6 +9,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+
 body {
     background-repeat: no-repeat;
     background-position: center;
@@ -18,7 +24,6 @@ body {
     background-color: black;
     height: 100%;
     background-image: url(https://wallpaper.dog/large/20552239.jpg);
-    background-attachment: fixed;
 }
 
 html {
@@ -158,96 +163,88 @@ html {
 
     /*FOOTER*/
 
-footer{
-    position: relative;
-    text-align: center;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    background-attachment: fixed;
-    height: auto;
-    width: 100%;
-    font-family: "Open Sans";
-    padding-top: 40px;
-    color: black;
-    width: 100vw;
-    align-self: flex-end;
-}
-.footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-.footer-content h3{
-    font-size: 2.8rem;
-    font-weight: 800;
-    text-transform: capitalize;
-    line-height: 3rem;
-    display: flex;
-}
-.footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-}
-.socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-    margin-right: 40px;
-}
-.socials li{
-    margin: 0 10px;
-}
-.socials a{
-    text-decoration: none;
-    color: black;
-}
-.socials a i{
-    font-size: 1.1rem;
-    transition: color .4s ease;
-
-}
-.socials a:hover i{
-    color: #c8102e;
-}
-
-.footer-bottom{
-    background: gray;
-    width: 100vw;
-    padding: 20px 0;
-    text-align: center;
-    align-self: flex-end;
-}
-.footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-.footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
-    margin-left: 2px;
-    color: red;
-}
-
-.footer__bottom h4 {
-    color: #fafafa;
-    font-size: 0.8rem;
-}
-
-.author {
-    opacity: .4;
-    color: red;
-    text-decoration: none;
-}
+    i {
+        font-size: 2.4rem;
+    }
+    .footer {
+        position: relative;
+        padding-block: 5rem;
+        background-color: #eee;
+        color: #666873;
+    }
+    .footer__container {
+        max-width: 116rem;
+        margin: auto;
+        padding: 0 1.5rem;
+    }
+    
+    .footer__top {
+        display: grid;
+        grid-template-columns: 
+        repeat(auto-fit, minmax(20rem, 1fr));
+        row-gap: 2rem;
+    }
+    .footer__title {
+        font-size: 1.8rem;
+        color: #1d428a;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+    .footer__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .footer__list-item {
+        list-style: none;
+    }
+    
+    .footer__list-item a {
+        list-style: none;
+        color: black;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color .4s ease;
+    }
+    
+    .footer__list-item a:hover{
+        color: red;
+    }
+    
+    .footer__list-item i{
+        font-size: 1.8rem;
+    }
+    
+    .footer__list-link {
+        text-decoration: none;
+        color: inherit;
+        transition: color .25s;
+    }
+    .footer__list-link:hover {
+        color: red;
+    }
+    
+    .company__info {
+        grid-column: 1/-1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-right: 5rem;
+    }
+    .company__logo {
+        color: #1d428a;
+    }
+    .company__info ul {
+        flex-direction: row;
+    }
+    .copyright {
+        margin-top: auto;
+    }
+    @media screen and (min-width: 40em) {
+        .company__info {
+            grid-column: span 2;
+        }
+    }
 
     @media (min-width: 992px) {
         .navbar-expand-lg .navbar-collapse {

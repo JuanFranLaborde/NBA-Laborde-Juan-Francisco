@@ -16,10 +16,16 @@ ul {
 
 /*BODY*/
 
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+
 body {
     font-size: 16px;
     color: #333;
-    background-color: #eee;
+    background-color: #fff;
 
 }
 
@@ -58,126 +64,36 @@ body {
     transform: scale(1.2);
 }
 
-/*FOOTER*/
-
-footer{
-    position: relative;
-    text-align: center;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    background-attachment: fixed;
-    height: auto;
-    width: 100%;
-    font-family: "Open Sans";
-    padding-top: 40px;
-    color: black;
-    width: 100vw;
-    align-self: flex-end;
-}
-.footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-.footer-content h3{
-    font-size: 2.8rem;
-    font-weight: 800;
-    text-transform: capitalize;
-    line-height: 3rem;
-    display: flex;
-}
-.footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-}
-.socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-
-}
-.socials li{
-    margin: 0 10px;
-}
-.socials a{
-    text-decoration: none;
-    color: black;
-}
-.socials a i{
-    font-size: 1.1rem;
-    transition: color .4s ease;
-
-}
-.socials a:hover i{
-    color: #c8102e;
-}
-
-.footer-bottom{
-    background: gray;
-    width: 100vw;
-    padding: 20px 0;
-    text-align: center;
-    align-self: flex-end;
-}
-.footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-.footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
-    margin-left: 2px;
-    color: red;
-}
-
-.footer__bottom h4 {
-    color: #fafafa;
-    font-size: 0.8rem;
-}
-
-.author {
-    opacity: .4;
-    color: red;
-    text-decoration: none;
-}
-
 /*MAIN*/
 
 main {
     font-size: 1.6rem;
     color: #333;
-    background-color: #eee;
-    padding-top: 4%;
+    background-color: #fff;
+    padding-top: 8%;
     margin-right: 40px;
     margin-left: 10px;
     padding-left: 10%;
+    padding-bottom: 3%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
+
 }
 
 .card {
     background-color: #fff;
     box-shadow: 2px .8rem 1rem rgba(0, 0, 0, .025);
+    border-radius: 10px;
 }
 
 .card__publication {
     position: relative;
     height: 20rem;
     overflow: hidden;
+    border-radius: 10px;
+    border: none;
 }
 
 .card__publication img {
@@ -186,6 +102,7 @@ main {
     height: 100%;
     object-fit: cover;
     transition: transform .5s;
+    border-radius: 10px;
 }
 
 .card:hover .card__publication img {
@@ -249,6 +166,92 @@ main {
 
 .card__cta:hover span {
     transform: translateX(.5rem);
+}
+
+/*FOOTER*/
+
+i {
+    font-size: 2.4rem;
+}
+.footer {
+    position: relative;
+    padding-block: 5rem;
+    background-color: #eee;
+    color: #666873;
+}
+.footer__container {
+    max-width: 116rem;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+}
+.footer__title {
+    font-size: 1.8rem;
+    color: #1d428a;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.footer__list-item {
+    list-style: none;
+}
+
+.footer__list-item a {
+    list-style: none;
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.footer__list-item a:hover{
+    color: red;
+}
+
+.footer__list-item i{
+    font-size: 1.8rem;
+}
+
+.footer__list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color .25s;
+}
+.footer__list-link:hover {
+    color: red;
+}
+
+.company__info {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-right: 5rem;
+}
+.company__logo {
+    color: #1d428a;
+}
+.company__info ul {
+    flex-direction: row;
+}
+.copyright {
+    margin-top: auto;
+}
+
+@media screen and (min-width: 40em) {
+    .company__info {
+        grid-column: span 2;
+    }
 }
 
 @media screen and (min-width: 37.5em) {
